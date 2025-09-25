@@ -127,7 +127,7 @@ item_description AS (
         classification,
         location,
         found_time,
-        PARSE_JSON(SNOWFLAKE.CORTEX.COMPLETE(
+        PARSE_JSON(AI_COMPLETE(
             'claude-3-5-sonnet',
             'Describe the key characteristics of a lost ' || classification || ' as seen in this image. Respond in JSON with fields: item_type, color, brand (if visible), distinguishing_features, condition.',
             img
